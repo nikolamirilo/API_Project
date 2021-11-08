@@ -1,0 +1,14 @@
+.navbar {
+  padding: 0.5% 5%;
+
+  .nav-item {
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    .nav-link {
+      color: #ffffffc2;
+    }
+    .nav-link:hover {
+      color: #ffffff;
+    }
+  }
+}
