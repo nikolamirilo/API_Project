@@ -8,7 +8,7 @@ const Navbar = () => {
     <div classNameName="navbar">
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <Link className="navbar-brand" to="/">
-          Meme Generator
+          NBA Insights {"     "}
           <SiReactos size={30} />
         </Link>
         <button

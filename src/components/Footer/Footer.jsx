@@ -6,7 +6,7 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <div classNameName="footer">
-      <footer className="text-center bg-primary fixed-bottom text-white">
+      <footer className="text-center bg-primary text-white">
         <div className="container pt-1">
           <section className="mb-0">
             <Link
