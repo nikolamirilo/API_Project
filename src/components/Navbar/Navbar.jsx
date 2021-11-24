@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { SiReactos } from "react-icons/si";
+import { GiBasketballBall } from "react-icons/gi";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -8,8 +8,7 @@ const Navbar = () => {
     <div classNameName="navbar">
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         <Link className="navbar-brand" to="/">
-          NBA Insights {"     "}
-          <SiReactos size={30} />
+          NBA Insights {"     "} <GiBasketballBall size={30} />
         </Link>
         <button
           className="navbar-toggler"
