@@ -1,10 +1,18 @@
 import React from "react";
-import { Layout, Players } from "../components";
+import { Layout, Players, Teams, Games } from "../components";
 
 const Content = (props) => {
   return (
     <div className="content">
-      <Layout>{props.pageType === "players" ? <Players /> : <div></div>}</Layout>
+      <Layout>
+        {props.pageType === "players" ? (
+          <Players />
+        ) : props.pageType === "teams" ? (
+          <Teams />
+        ) : (
+          props.pageType === "games" && <Games />
+        )}
+      </Layout>
     </div>
   );
 };

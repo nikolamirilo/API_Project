@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useFetch = (url = "", options = {}) => {
-  const [dataAPI, setDataAPI] = useState({});
+  const [data, setData] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -10,9 +10,9 @@ const useFetch = (url = "", options = {}) => {
 
     fetch(url, options)
       .then((res) => res.json())
-      .then((dataAPI) => {
+      .then((data) => {
         if (isMounted) {
-          setDataAPI(dataAPI);
+          setData(data);
           setError(null);
         }
       })
@@ -20,7 +20,7 @@ const useFetch = (url = "", options = {}) => {
       .catch((error) => {
         if (isMounted) {
           setError(error);
-          setDataAPI(null);
+          setData(null);
         }
       })
       .finally(() => isMounted && setLoading(false));
@@ -28,6 +28,6 @@ const useFetch = (url = "", options = {}) => {
     return () => (isMounted = false);
   }, []); //eslint-disable-line
 
-  return { loading, error, dataAPI };
+  return { loading, error, data };
 };
 export default useFetch;

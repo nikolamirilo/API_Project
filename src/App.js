@@ -8,6 +8,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/players" element={<Content pageType="players" />} />
+        <Route path="/teams" element={<Content pageType="teams" />} />
+        <Route path="/games" element={<Content pageType="games" />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </>

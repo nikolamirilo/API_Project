@@ -4,23 +4,22 @@ import useFetch from "../../hooks/useFetch";
 import "./Players.scss";
 
 const PlayersContainer = () => {
-  // const { dataAPI = [] } = useFetch("https://free-nba.p.rapidapi.com/players", {
-  //   method: "GET",
-  //   url: "https://free-nba.p.rapidapi.com/players",
-  //   headers: {
-  //     "x-rapidapi-host": "free-nba.p.rapidapi.com",
-  //     "x-rapidapi-key": "5c16178ce3msh0929510bde0dfe8p103681jsn8bd102b87dd2",
-  //   },
-  // });
-  const { dataAPI = [] } = useFetch("http://data.nba.net/data/10s/prod/v1/2019/players.json");
-  console.log(dataAPI);
+  const {
+    data = [],
+    loading,
+    error,
+  } = useFetch("http://data.nba.net/data/10s/prod/v1/2019/players.json");
+  console.log(data);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error...</div>;
 
   return (
     <div className="players">
       <h1>Active Players</h1>
       <div className="cards">
-        {dataAPI.league &&
-          dataAPI.league.standard.map((item) => {
+        {data.league &&
+          data.league.standard.map((item) => {
             if (item.isActive === true) {
               return (
                 <Card

@@ -6,7 +6,7 @@ import "./Navbar.scss";
 const Navbar = () => {
   return (
     <div classNameName="navbar">
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar  navbar-expand-lg navbar-dark bg-primary fixed-top">
         <Link className="navbar-brand" to="/">
           NBA Insights {"     "} <GiBasketballBall size={30} />
         </Link>
