@@ -10,17 +10,17 @@ const Home = () => {
           className="buttons"
           style={{
             height: "75vh",
+            width: "20vw",
+            margin: "0 40vw",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "space-between",
             color: "black",
             fontSize: "2rem",
           }}
         >
           <Link to="/players">Players</Link>
-          {"                                     "}
           <Link to="/teams">Teams</Link>
-          {"                                     "}
           <Link to="/games">Games</Link>
         </div>
       </Layout>
